@@ -10,7 +10,7 @@ from factorial_pyramid import factorial_3 as fw
 
 
 
-print(fl(4))
+print(fl(5))
 
 
 
