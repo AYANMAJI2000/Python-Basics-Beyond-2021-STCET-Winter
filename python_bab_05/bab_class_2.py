@@ -46,7 +46,6 @@ class Person:
 class Employee(Person):
 
     def __init__(self, *args, **kwargs):
-        print(args, kwargs)
         # self.first_name = first_name
         # self.last_name = last_name
         # self.age = age
@@ -55,19 +54,14 @@ class Employee(Person):
         self.annual_income = kwargs.get("annual_income", args[3])
     
     def __str__(self):
-        # print(super().__str__())
+        print(super().__str__())
         return f"Employee Class {self.first_name} {self.last_name} {self.annual_income}"
 
-
-employee = Employee("Nauman", "Arif", 100, 30)
-employee_1 = Employee("John", "Dow", 99, 40)
-
-employee_2 = Employee(
-    first_name="John", last_name="Dow",
-    age=99, annual_income=40,
-)
-
+args = ["Nauman", "Arif", 100, 30]
+employee = Employee(*args)
+args_1 = ["John", "Dow", 99, 40]
+employee_1 = Employee(*args_1)
 
 print(employee)
 print(employee_1)
-print(employee_2)
+
